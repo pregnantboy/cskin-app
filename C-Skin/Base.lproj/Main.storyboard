@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AddViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menubar.png" translatesAutoresizingMaskIntoConstraints="NO" id="IGl-Hf-Xpi">
+                                <rect key="frame" x="0.0" y="601" width="375" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="XxT-Bk-EE0"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Il2-eR-pq5">
+                                <rect key="frame" x="150" y="601" width="75" height="66"/>
+                                <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                <state key="normal" image="new.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8H-t8-Ijo">
+                                <rect key="frame" x="300" y="601" width="75" height="66"/>
+                                <inset key="contentEdgeInsets" minX="22" minY="18" maxX="22" maxY="18"/>
+                                <state key="normal" image="settings.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oI8-8C-koU">
+                                <rect key="frame" x="75" y="601" width="75" height="66"/>
+                                <inset key="imageEdgeInsets" minX="24" minY="20" maxX="24" maxY="20"/>
+                                <state key="normal" image="inbox.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrr-16-xZW">
+                                <rect key="frame" x="0.0" y="601" width="75" height="66"/>
+                                <inset key="contentEdgeInsets" minX="25" minY="18" maxX="25" maxY="18"/>
+                                <state key="normal" image="logbook.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abW-sh-Wzc">
+                                <rect key="frame" x="225" y="601" width="75" height="66"/>
+                                <inset key="imageEdgeInsets" minX="25" minY="17" maxX="25" maxY="17"/>
+                                <state key="normal" image="doctor.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oI8-8C-koU" firstAttribute="leading" secondItem="xrr-16-xZW" secondAttribute="trailing" id="3Lh-Qi-d7V"/>
+                            <constraint firstItem="Il2-eR-pq5" firstAttribute="width" secondItem="abW-sh-Wzc" secondAttribute="width" id="898-zI-Ez9"/>
+                            <constraint firstItem="IGl-Hf-Xpi" firstAttribute="centerY" secondItem="xrr-16-xZW" secondAttribute="centerY" id="AOq-sh-lpw"/>
+                            <constraint firstItem="v8H-t8-Ijo" firstAttribute="centerY" secondItem="IGl-Hf-Xpi" secondAttribute="centerY" id="CNV-IS-Gl5"/>
+                            <constraint firstItem="abW-sh-Wzc" firstAttribute="leading" secondItem="Il2-eR-pq5" secondAttribute="trailing" id="Czd-Q0-LGe"/>
+                            <constraint firstItem="IGl-Hf-Xpi" firstAttribute="height" secondItem="xrr-16-xZW" secondAttribute="height" id="JvQ-9K-0Uw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IGl-Hf-Xpi" secondAttribute="trailing" constant="-16" id="L1q-uB-YGh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IGl-Hf-Xpi" secondAttribute="bottom" id="LfR-hs-tYC"/>
+                            <constraint firstItem="IGl-Hf-Xpi" firstAttribute="height" secondItem="v8H-t8-Ijo" secondAttribute="height" id="MFU-Rf-U6d"/>
+                            <constraint firstItem="Il2-eR-pq5" firstAttribute="height" secondItem="IGl-Hf-Xpi" secondAttribute="height" id="Mkc-DW-a8G"/>
+                            <constraint firstItem="IGl-Hf-Xpi" firstAttribute="height" secondItem="oI8-8C-koU" secondAttribute="height" id="OEw-BH-WKT"/>
+                            <constraint firstItem="oI8-8C-koU" firstAttribute="centerY" secondItem="IGl-Hf-Xpi" secondAttribute="centerY" id="OQy-w6-keJ"/>
+                            <constraint firstItem="v8H-t8-Ijo" firstAttribute="leading" secondItem="abW-sh-Wzc" secondAttribute="trailing" id="PBI-Po-gpf"/>
+                            <constraint firstItem="IGl-Hf-Xpi" firstAttribute="height" secondItem="abW-sh-Wzc" secondAttribute="height" id="R3f-Fd-PS6"/>
+                            <constraint firstItem="Il2-eR-pq5" firstAttribute="centerY" secondItem="IGl-Hf-Xpi" secondAttribute="centerY" id="TVM-jF-cwY"/>
+                            <constraint firstItem="IGl-Hf-Xpi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="WNY-Jj-Gdc"/>
+                            <constraint firstItem="oI8-8C-koU" firstAttribute="width" secondItem="Il2-eR-pq5" secondAttribute="width" id="Wlo-ed-8Ns"/>
+                            <constraint firstItem="abW-sh-Wzc" firstAttribute="width" secondItem="v8H-t8-Ijo" secondAttribute="width" id="XMa-Pf-oIz"/>
+                            <constraint firstItem="v8H-t8-Ijo" firstAttribute="leading" secondItem="abW-sh-Wzc" secondAttribute="trailing" id="cA7-Iw-fbL"/>
+                            <constraint firstItem="abW-sh-Wzc" firstAttribute="centerY" secondItem="IGl-Hf-Xpi" secondAttribute="centerY" id="hxz-yL-ctk"/>
+                            <constraint firstItem="IGl-Hf-Xpi" firstAttribute="leading" secondItem="xrr-16-xZW" secondAttribute="trailing" id="iAD-Jn-bSL"/>
+                            <constraint firstItem="IGl-Hf-Xpi" firstAttribute="leading" secondItem="xrr-16-xZW" secondAttribute="leading" id="kh1-U4-lSR"/>
+                            <constraint firstItem="v8H-t8-Ijo" firstAttribute="trailing" secondItem="IGl-Hf-Xpi" secondAttribute="trailing" id="l3w-Os-saQ"/>
+                            <constraint firstItem="Il2-eR-pq5" firstAttribute="centerX" secondItem="IGl-Hf-Xpi" secondAttribute="centerX" id="l6d-ik-HcM"/>
+                            <constraint firstItem="abW-sh-Wzc" firstAttribute="leading" secondItem="Il2-eR-pq5" secondAttribute="trailing" id="uUM-hk-ziK"/>
+                            <constraint firstItem="oI8-8C-koU" firstAttribute="width" secondItem="xrr-16-xZW" secondAttribute="width" id="ziQ-dn-1Zc"/>
+                            <constraint firstItem="Il2-eR-pq5" firstAttribute="leading" secondItem="oI8-8C-koU" secondAttribute="trailing" id="zuw-Yq-af6"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="iAD-Jn-bSL"/>
+                                <exclude reference="uUM-hk-ziK"/>
+                                <exclude reference="PBI-Po-gpf"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doctor.png" width="81" height="99"/>
+        <image name="inbox.png" width="96" height="84"/>
+        <image name="logbook.png" width="78" height="99"/>
+        <image name="menubar.png" width="374" height="66"/>
+        <image name="new.png" width="150" height="150"/>
+        <image name="settings.png" width="108" height="108"/>
+    </resources>
+</document>
