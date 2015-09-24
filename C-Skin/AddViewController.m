@@ -10,6 +10,9 @@
 
 @interface AddViewController () {
     UIButton *_closePopUpViewsButton;
+    NSString *_date;
+    NSMutableArray *_photoArray;
+    NSString *_details;
 }
 
 @end
@@ -42,6 +45,8 @@
     [_closePopUpViewsButton addTarget:self action:@selector(hideDatePickerView) forControlEvents:UIControlEventTouchUpInside];
     [self hideClosePopUpViewsButton];
     
+    // Initialize photoArray.
+    _photoArray = [[NSMutableArray alloc] init];
     
 }
 
@@ -85,8 +90,11 @@
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-   
-    return 5;
+    NSInteger numberOfCells = [_photoArray count] + 1;
+    if (numberOfCells > 5) {
+        return 5;
+    }
+    return numberOfCells;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

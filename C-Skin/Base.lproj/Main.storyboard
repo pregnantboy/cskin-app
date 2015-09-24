@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6eW-Ym-AoT">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -19,53 +19,101 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="menubar.png" translatesAutoresizingMaskIntoConstraints="NO" id="IGl-Hf-Xpi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menubar.png" translatesAutoresizingMaskIntoConstraints="NO" id="IGl-Hf-Xpi">
                                 <rect key="frame" x="0.0" y="601" width="375" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="XxT-Bk-EE0"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Il2-eR-pq5" userLabel="New Button">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Il2-eR-pq5" userLabel="New Button">
                                 <rect key="frame" x="150" y="601" width="75" height="66"/>
                                 <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
                                 <state key="normal" image="new.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8H-t8-Ijo" userLabel="Settings Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8H-t8-Ijo" userLabel="Settings Button">
                                 <rect key="frame" x="300" y="601" width="75" height="66"/>
                                 <inset key="contentEdgeInsets" minX="22" minY="18" maxX="22" maxY="18"/>
                                 <state key="normal" image="settings.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abW-sh-Wzc" userLabel="Doctor Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abW-sh-Wzc" userLabel="Doctor Button">
                                 <rect key="frame" x="225" y="601" width="75" height="66"/>
                                 <inset key="imageEdgeInsets" minX="25" minY="17" maxX="25" maxY="17"/>
                                 <state key="normal" image="doctor.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oI8-8C-koU" userLabel="Inbox Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oI8-8C-koU" userLabel="Inbox Button">
                                 <rect key="frame" x="75" y="601" width="75" height="66"/>
                                 <inset key="imageEdgeInsets" minX="24" minY="20" maxX="24" maxY="20"/>
                                 <state key="normal" image="inbox.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrr-16-xZW" userLabel="Log Button">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrr-16-xZW" userLabel="Log Button">
                                 <rect key="frame" x="0.0" y="601" width="75" height="66"/>
                                 <inset key="contentEdgeInsets" minX="25" minY="18" maxX="25" maxY="18"/>
                                 <state key="normal" image="logbook.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lT-Qn-C6Z">
-                                <rect key="frame" x="41" y="51" width="65" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lT-Qn-C6Z">
+                                <rect key="frame" x="41" y="51" width="41.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="11B-8v-VZw">
+                                <rect key="frame" x="41" y="170.5" width="293" height="146.5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="11B-8v-VZw" secondAttribute="height" multiplier="2:1" id="xBf-Nc-NeU"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L1Q-m9-hdP">
+                                    <size key="itemSize" width="141" height="144"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="9S5-zN-qGf" customClass="PhotoCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="141" height="144"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KiB-SK-zMY">
+                                                    <rect key="frame" x="8" y="8" width="125" height="128"/>
+                                                    <state key="normal" title="Button" image="photo.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="centerY" secondItem="KiB-SK-zMY" secondAttribute="centerY" id="LIb-fw-xxn"/>
+                                            <constraint firstAttribute="centerX" secondItem="KiB-SK-zMY" secondAttribute="centerX" id="XKh-PI-uZU"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="KiB-SK-zMY" secondAttribute="trailing" id="doM-UB-ndc"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="KiB-SK-zMY" secondAttribute="bottom" id="nGM-fZ-dro"/>
+                                            <constraint firstItem="KiB-SK-zMY" firstAttribute="top" secondItem="9S5-zN-qGf" secondAttribute="topMargin" id="vJa-Se-HcY"/>
+                                            <constraint firstItem="KiB-SK-zMY" firstAttribute="leading" secondItem="9S5-zN-qGf" secondAttribute="leadingMargin" id="y7X-pT-Jat"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cameraButton" destination="KiB-SK-zMY" id="nII-Fh-dZ8"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="w3P-8a-e7c"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vWk-3Y-tHj"/>
+                                </connections>
+                            </collectionView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fNX-rr-yNd">
                                 <rect key="frame" x="41" y="79" width="293" height="30"/>
                                 <color key="backgroundColor" red="0.93686868686868685" green="0.93686868686868685" blue="0.93686868686868685" alpha="1" colorSpace="calibratedRGB"/>
@@ -75,6 +123,12 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Hsr-Dz-KFb"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Images" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eco-WA-MCk">
+                                <rect key="frame" x="41" y="130" width="109" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hMk-JR-ZrW">
                                 <rect key="frame" x="345" y="28" width="19" height="17"/>
                                 <subviews>
@@ -129,49 +183,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Images" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eco-WA-MCk">
-                                <rect key="frame" x="41" y="130" width="109" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="11B-8v-VZw">
-                                <rect key="frame" x="41" y="170" width="293" height="146.5"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="11B-8v-VZw" secondAttribute="height" multiplier="2:1" id="xBf-Nc-NeU"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L1Q-m9-hdP">
-                                    <size key="itemSize" width="141" height="144"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="9S5-zN-qGf" customClass="PhotoCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="141" height="144"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KiB-SK-zMY">
-                                                    <rect key="frame" x="47" y="49" width="46" height="30"/>
-                                                    <state key="normal" title="Button">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" red="1" green="0.66501452139999995" blue="0.66150155109999997" alpha="1" colorSpace="calibratedRGB"/>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="w3P-8a-e7c"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vWk-3Y-tHj"/>
-                                </connections>
-                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -225,7 +236,7 @@
                         </variation>
                     </view>
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="dateOfPicture" destination="fNX-rr-yNd" id="ZSc-cK-Q7x"/>
@@ -237,7 +248,61 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="201.5" y="309.5"/>
+            <point key="canvasLocation" x="201.5" y="262.5"/>
+        </scene>
+        <!--Photo Picker View Controller-->
+        <scene sceneID="FZs-m7-JF8">
+            <objects>
+                <viewController id="6eW-Ym-AoT" customClass="PhotoPickerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ouL-I6-Bko"/>
+                        <viewControllerLayoutGuide type="bottom" id="bal-cN-9Si"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lNY-t2-bGa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4J7-bH-NLY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dcd-JV-ibe">
+                                <rect key="frame" x="-1" y="480" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" id="EHR-yt-ZBP"/>
+                                    <barButtonItem title="Item" id="d8F-wn-SfR"/>
+                                    <barButtonItem title="Item" id="SkS-mE-vMI">
+                                        <connections>
+                                            <action selector="showImagePickerForCamera:" destination="6eW-Ym-AoT" id="u2W-4A-TPF"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Item" id="qQy-lT-GVL">
+                                        <connections>
+                                            <action selector="showImagePickerForPhotoPicker:" destination="6eW-Ym-AoT" id="H4Q-xg-5cX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UhM-TP-NlM">
+                                <rect key="frame" x="92" y="132" width="188" height="334"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="delayedPhotoButton" destination="SkS-mE-vMI" id="kBN-Qu-44u"/>
+                        <outlet property="doneButton" destination="qQy-lT-GVL" id="YXl-8Q-vTG"/>
+                        <outlet property="imageView" destination="4J7-bH-NLY" id="Fdm-eC-Lfa"/>
+                        <outlet property="overlayView" destination="UhM-TP-NlM" id="7bZ-z6-dbj"/>
+                        <outlet property="startStopButton" destination="d8F-wn-SfR" id="q9Z-Zp-VlX"/>
+                        <outlet property="takePictureButton" destination="EHR-yt-ZBP" id="i5E-wE-58D"/>
+                        <outlet property="toolBar" destination="dcd-JV-ibe" id="Q50-so-a7G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eVf-7d-h3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="729.5" y="262.5"/>
         </scene>
     </scenes>
     <resources>
@@ -246,6 +311,7 @@
         <image name="logbook.png" width="78" height="99"/>
         <image name="menubar.png" width="374" height="66"/>
         <image name="new.png" width="150" height="150"/>
+        <image name="photo.png" width="230" height="230"/>
         <image name="set button.png" width="264" height="39"/>
         <image name="settings.png" width="108" height="108"/>
         <image name="today button.png" width="264" height="39"/>
