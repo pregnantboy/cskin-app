@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C2FB19C1BB3CBCE00F0367E /* set button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C2FB19B1BB3CBCE00F0367E /* set button.png */; };
+		3C2FB19E1BB3CCE800F0367E /* today button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C2FB19D1BB3CCE800F0367E /* today button.png */; };
+		3C2FB1A21BB3CF9F00F0367E /* ReportObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2FB1A11BB3CF9F00F0367E /* ReportObject.m */; };
+		3C2FB1AE1BB41A1200F0367E /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2FB1AD1BB41A1200F0367E /* PhotoCollectionViewCell.m */; };
 		3C9515CD1BAFB5A500361E5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9515CC1BAFB5A500361E5F /* main.m */; };
 		3C9515D01BAFB5A500361E5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9515CF1BAFB5A500361E5F /* AppDelegate.m */; };
 		3C9515D31BAFB5A500361E5F /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9515D21BAFB5A500361E5F /* AddViewController.m */; };
@@ -33,6 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C2FB19B1BB3CBCE00F0367E /* set button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set button.png"; sourceTree = "<group>"; };
+		3C2FB19D1BB3CCE800F0367E /* today button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "today button.png"; sourceTree = "<group>"; };
+		3C2FB1A01BB3CF9F00F0367E /* ReportObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportObject.h; sourceTree = "<group>"; };
+		3C2FB1A11BB3CF9F00F0367E /* ReportObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportObject.m; sourceTree = "<group>"; };
+		3C2FB1AC1BB41A1200F0367E /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		3C2FB1AD1BB41A1200F0367E /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		3C9515C71BAFB5A500361E5F /* C-Skin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "C-Skin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C9515CB1BAFB5A500361E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C9515CC1BAFB5A500361E5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -95,8 +105,12 @@
 			children = (
 				3C9515CE1BAFB5A500361E5F /* AppDelegate.h */,
 				3C9515CF1BAFB5A500361E5F /* AppDelegate.m */,
+				3C2FB1AC1BB41A1200F0367E /* PhotoCollectionViewCell.h */,
+				3C2FB1AD1BB41A1200F0367E /* PhotoCollectionViewCell.m */,
 				3C9515D11BAFB5A500361E5F /* AddViewController.h */,
 				3C9515D21BAFB5A500361E5F /* AddViewController.m */,
+				3C2FB1A01BB3CF9F00F0367E /* ReportObject.h */,
+				3C2FB1A11BB3CF9F00F0367E /* ReportObject.m */,
 				3C9515D41BAFB5A500361E5F /* Main.storyboard */,
 				3C9515D71BAFB5A500361E5F /* Images.xcassets */,
 				3C9515D91BAFB5A500361E5F /* LaunchScreen.xib */,
@@ -109,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				3C9515F01BAFDDCD00361E5F /* doctor.png */,
+				3C2FB19B1BB3CBCE00F0367E /* set button.png */,
+				3C2FB19D1BB3CCE800F0367E /* today button.png */,
 				3C9515FA1BAFDF7000361E5F /* new.png */,
 				3C9515F11BAFDDCD00361E5F /* inbox.png */,
 				3C9515F21BAFDDCD00361E5F /* logbook.png */,
@@ -218,6 +234,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C9515F91BAFDDCD00361E5F /* settings.png in Resources */,
+				3C2FB19E1BB3CCE800F0367E /* today button.png in Resources */,
+				3C2FB19C1BB3CBCE00F0367E /* set button.png in Resources */,
 				3C9515F51BAFDDCD00361E5F /* doctor.png in Resources */,
 				3C9515F61BAFDDCD00361E5F /* inbox.png in Resources */,
 				3C9515FB1BAFDF7000361E5F /* new.png in Resources */,
@@ -243,8 +261,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C2FB1A21BB3CF9F00F0367E /* ReportObject.m in Sources */,
 				3C9515D31BAFB5A500361E5F /* AddViewController.m in Sources */,
 				3C9515D01BAFB5A500361E5F /* AppDelegate.m in Sources */,
+				3C2FB1AE1BB41A1200F0367E /* PhotoCollectionViewCell.m in Sources */,
 				3C9515CD1BAFB5A500361E5F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,6 +466,7 @@
 				3C9515EC1BAFB5A500361E5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C9515ED1BAFB5A500361E5F /* Build configuration list for PBXNativeTarget "C-SkinTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +475,7 @@
 				3C9515EF1BAFB5A500361E5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
