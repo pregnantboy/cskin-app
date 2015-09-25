@@ -7,16 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PhotoCollectionViewCell.h" 
+#import "PhotoCollectionViewCell.h"
 
 @interface AddViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UITextField *dateOfPicture;
 @property (weak, nonatomic) IBOutlet UIView *datePickerView;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 @property (weak, nonatomic) IBOutlet UILabel *photoLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *photoCollectionView;
+
+@property (weak, nonatomic) IBOutlet UIView *detailsContainerView;
+@property (weak, nonatomic) IBOutlet UITextView *detailsTextView;
 
 @end
 
