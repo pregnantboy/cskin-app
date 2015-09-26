@@ -10,4 +10,8 @@
 
 @implementation PhotoCollectionViewCell
 
+- (IBAction)addPhoto:(id)sender {
+    
+}
+
 @end

@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C0D465B1BB560D700F3AFFE /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C0D46591BB560D700F3AFFE /* camera.png */; };
+		3C0D465C1BB560D700F3AFFE /* cameraRoll.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C0D465A1BB560D700F3AFFE /* cameraRoll.png */; };
 		3C2FB19C1BB3CBCE00F0367E /* set button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C2FB19B1BB3CBCE00F0367E /* set button.png */; };
 		3C2FB19E1BB3CCE800F0367E /* today button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C2FB19D1BB3CCE800F0367E /* today button.png */; };
 		3C2FB1A21BB3CF9F00F0367E /* ReportObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2FB1A11BB3CF9F00F0367E /* ReportObject.m */; };
 		3C2FB1AE1BB41A1200F0367E /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2FB1AD1BB41A1200F0367E /* PhotoCollectionViewCell.m */; };
 		3C2FB1B41BB4782000F0367E /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C2FB1B31BB4782000F0367E /* photo.png */; };
-		3C5C8AB51BB47C5D00ABCC2B /* PhotoPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5C8AB41BB47C5D00ABCC2B /* PhotoPickerViewController.m */; };
+		3C5C8AB51BB47C5D00ABCC2B /* PhotoPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5C8AB41BB47C5D00ABCC2B /* PhotoPickerManager.m */; };
 		3C9515CD1BAFB5A500361E5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9515CC1BAFB5A500361E5F /* main.m */; };
 		3C9515D01BAFB5A500361E5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9515CF1BAFB5A500361E5F /* AppDelegate.m */; };
 		3C9515D31BAFB5A500361E5F /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9515D21BAFB5A500361E5F /* AddViewController.m */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C0D46591BB560D700F3AFFE /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		3C0D465A1BB560D700F3AFFE /* cameraRoll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraRoll.png; sourceTree = "<group>"; };
 		3C2FB19B1BB3CBCE00F0367E /* set button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set button.png"; sourceTree = "<group>"; };
 		3C2FB19D1BB3CCE800F0367E /* today button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "today button.png"; sourceTree = "<group>"; };
 		3C2FB1A01BB3CF9F00F0367E /* ReportObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportObject.h; sourceTree = "<group>"; };
@@ -46,8 +50,8 @@
 		3C2FB1AC1BB41A1200F0367E /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		3C2FB1AD1BB41A1200F0367E /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		3C2FB1B31BB4782000F0367E /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
-		3C5C8AB31BB47C5D00ABCC2B /* PhotoPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPickerViewController.h; sourceTree = "<group>"; };
-		3C5C8AB41BB47C5D00ABCC2B /* PhotoPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerViewController.m; sourceTree = "<group>"; };
+		3C5C8AB31BB47C5D00ABCC2B /* PhotoPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPickerManager.h; sourceTree = "<group>"; };
+		3C5C8AB41BB47C5D00ABCC2B /* PhotoPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerManager.m; sourceTree = "<group>"; };
 		3C9515C71BAFB5A500361E5F /* C-Skin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "C-Skin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C9515CB1BAFB5A500361E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C9515CC1BAFB5A500361E5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -114,8 +118,8 @@
 				3C9515CF1BAFB5A500361E5F /* AppDelegate.m */,
 				3C2FB1AC1BB41A1200F0367E /* PhotoCollectionViewCell.h */,
 				3C2FB1AD1BB41A1200F0367E /* PhotoCollectionViewCell.m */,
-				3C5C8AB31BB47C5D00ABCC2B /* PhotoPickerViewController.h */,
-				3C5C8AB41BB47C5D00ABCC2B /* PhotoPickerViewController.m */,
+				3C5C8AB31BB47C5D00ABCC2B /* PhotoPickerManager.h */,
+				3C5C8AB41BB47C5D00ABCC2B /* PhotoPickerManager.m */,
 				3C2FB1A01BB3CF9F00F0367E /* ReportObject.h */,
 				3C2FB1A11BB3CF9F00F0367E /* ReportObject.m */,
 				3C9515D41BAFB5A500361E5F /* Main.storyboard */,
@@ -132,6 +136,8 @@
 				3C9515F01BAFDDCD00361E5F /* doctor.png */,
 				3C2FB19B1BB3CBCE00F0367E /* set button.png */,
 				3C2FB1B31BB4782000F0367E /* photo.png */,
+				3C0D46591BB560D700F3AFFE /* camera.png */,
+				3C0D465A1BB560D700F3AFFE /* cameraRoll.png */,
 				3C2FB19D1BB3CCE800F0367E /* today button.png */,
 				3C9515FA1BAFDF7000361E5F /* new.png */,
 				3C9515F11BAFDDCD00361E5F /* inbox.png */,
@@ -210,6 +216,7 @@
 				TargetAttributes = {
 					3C9515C61BAFB5A500361E5F = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = W7BDRVLLQN;
 					};
 					3C9515DF1BAFB5A500361E5F = {
 						CreatedOnToolsVersion = 6.4;
@@ -246,7 +253,9 @@
 				3C2FB1B41BB4782000F0367E /* photo.png in Resources */,
 				3C2FB19C1BB3CBCE00F0367E /* set button.png in Resources */,
 				3C9515F51BAFDDCD00361E5F /* doctor.png in Resources */,
+				3C0D465C1BB560D700F3AFFE /* cameraRoll.png in Resources */,
 				3C9515F61BAFDDCD00361E5F /* inbox.png in Resources */,
+				3C0D465B1BB560D700F3AFFE /* camera.png in Resources */,
 				3C9515FB1BAFDF7000361E5F /* new.png in Resources */,
 				3C9515F81BAFDDCD00361E5F /* menubar.png in Resources */,
 				3C9515D61BAFB5A500361E5F /* Main.storyboard in Resources */,
@@ -271,7 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C2FB1A21BB3CF9F00F0367E /* ReportObject.m in Sources */,
-				3C5C8AB51BB47C5D00ABCC2B /* PhotoPickerViewController.m in Sources */,
+				3C5C8AB51BB47C5D00ABCC2B /* PhotoPickerManager.m in Sources */,
 				3C9515D31BAFB5A500361E5F /* AddViewController.m in Sources */,
 				3C9515D01BAFB5A500361E5F /* AppDelegate.m in Sources */,
 				3C2FB1AE1BB41A1200F0367E /* PhotoCollectionViewCell.m in Sources */,
@@ -403,10 +412,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "C-Skin/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -415,10 +427,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "C-Skin/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

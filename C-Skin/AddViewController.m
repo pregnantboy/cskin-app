@@ -16,6 +16,8 @@
     NSString *_details;
     
     CGRect _originalDetailsContainerView;
+
+    PhotoPickerManager *_photoMgr;
 }
 
 @end
@@ -48,12 +50,22 @@
     [_closePopUpViewsButton addTarget:self action:@selector(hideAllPopUpViews) forControlEvents:UIControlEventTouchUpInside];
     [self hideClosePopUpViewsButton];
     
+ 
     // Initialize photoArray.
     _photoArray = [[NSMutableArray alloc] init];
     
     // Initialize detailsContainerView
     [self.view bringSubviewToFront:self.detailsContainerView];
     _originalDetailsContainerView = self.detailsContainerView.frame;
+    
+    // Initialize photoOptionView
+    self.photoOptionView.layer.cornerRadius = 25;
+    self.photoOptionView.layer.masksToBounds = YES;
+    [self hidePhotoOptionView];
+    
+    // Initialize PhotoPickerManager.
+    _photoMgr = [[PhotoPickerManager alloc] initWithViewController:self];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -83,6 +95,7 @@
 - (void)textViewDidEndEditing:(UITextView *)textView{
     if (textView == self.detailsTextView) {
         [self hideAllPopUpViews];
+        _details = self.detailsTextView.text;
     }
 }
 
@@ -115,6 +128,14 @@
     [self hideAllPopUpViews];
 }
 
+- (IBAction)cameraRollOption:(id)sender {
+    [_photoMgr showImagePickerForPhotoPicker];
+}
+
+- (IBAction)cameraOption:(id)sender {
+    [_photoMgr showImagePickerForCamera];
+}
+
 #pragma mark - HorizontalCollectionView delegates
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -132,7 +153,8 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"cell";
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    [cell.cameraButton addTarget:self action:@selector(showPhotoOptionView) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
 }
@@ -143,6 +165,8 @@
     [self hideClosePopUpViewsButton];
     [self hideDatePickerView];
     [self shiftDetailsContainerViewDown];
+    [self hidePhotoOptionView];
+    [self.view bringSubviewToFront:self.detailsContainerView];
     [self.view bringSubviewToFront:self.detailsContainerView];
     [self.detailsTextView resignFirstResponder];
 }
@@ -176,18 +200,31 @@
 }
 
 - (void)shiftDetailsContainerViewUp {
-    NSLog(@"is called, %d", [self.detailsTextView isFirstResponder]);
     [self.detailsContainerView setFrame:CGRectMake(0, _originalDetailsContainerView.origin.y - 216, _originalDetailsContainerView.size.width, _originalDetailsContainerView.size.height)];
     [self showClosePopUpViewsButton];
     [self.view bringSubviewToFront:self.detailsContainerView];
     [self.view becomeFirstResponder];
-
-    NSLog(@"%f", self.detailsContainerView.frame.origin.y);
 }
 
 - (void)shiftDetailsContainerViewDown {
     [self.view addSubview:self.detailsContainerView];
     [self.detailsContainerView setFrame:_originalDetailsContainerView];
+}
+
+- (void)showPhotoOptionView {
+    self.photoOptionView.hidden = NO;
+    [self showClosePopUpViewsButton];
+    // bring _closePopUpViewButton above detailsContailerView
+    [self.view bringSubviewToFront:_closePopUpViewsButton];
+    [self.view bringSubviewToFront:self.photoOptionView];
+    [UIView animateWithDuration:0.25 animations:^{
+        self.photoOptionView.alpha = 1.0;
+    }];
+}
+
+- (void)hidePhotoOptionView {
+    self.photoOptionView.hidden = YES;
+    self.photoOptionView.alpha = 0;
 }
 
 
@@ -199,6 +236,5 @@
     NSComparisonResult comparison = [[cal dateFromComponents:date1Components] compare:[cal dateFromComponents:date2Components]];
     return (comparison == NSOrderedSame);
 }
-
 
 @end
