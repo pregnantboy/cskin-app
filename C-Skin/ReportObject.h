@@ -12,6 +12,9 @@
 
 - (id)init;
 
+- (void)setDate:(NSDate *)date;
+- (void)setImages:(NSMutableArray *)arrayOfImages;
+- (void)setDetails:(NSString *)details;
 + (NSDateFormatter *)submissionDateFormatter;
 
 @end

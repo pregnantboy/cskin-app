@@ -15,8 +15,6 @@
     NSMutableArray *_photoArray;
     NSString *_details;
     
-    CGRect _originalDetailsContainerView;
-
     PhotoPickerManager *_photoMgr;
 }
 
@@ -27,8 +25,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    //self.view.backgroundColor = [UIColor colorWithRed:137/255.0 green:196/255.0 blue:244/255.0 alpha:1.0];
-        
     // Initialize datePickerView.
     [self hideDatePickerView];
     [self.datePickerView addSubview:self.datePicker];
@@ -44,19 +40,18 @@
     self.dateOfPicture.text = @"Today";
 
     // Initialize closePopUpviewButton.
-    _closePopUpViewsButton = [[UIButton alloc] initWithFrame:self.view.frame];
+    _closePopUpViewsButton = [[UIButton alloc] initWithFrame:self.mainScrollView.frame];
     _closePopUpViewsButton.backgroundColor = [UIColor colorWithWhite:0.6 alpha:0.4];
-    [self.view insertSubview:_closePopUpViewsButton belowSubview:self.datePickerView];
+    [self.view addSubview:_closePopUpViewsButton];
+    [self.view addSubview:self.datePickerView];
+    [self.view addSubview:self.photoOptionView];
     [_closePopUpViewsButton addTarget:self action:@selector(hideAllPopUpViews) forControlEvents:UIControlEventTouchUpInside];
     [self hideClosePopUpViewsButton];
     
  
     // Initialize photoArray.
+    _photoArray = [[NSMutableArray alloc] initWithObjects:[UIImage imageNamed:@"doctor.png"], [UIImage imageNamed:@"inbox.png"], nil];
     _photoArray = [[NSMutableArray alloc] init];
-    
-    // Initialize detailsContainerView
-    [self.view bringSubviewToFront:self.detailsContainerView];
-    _originalDetailsContainerView = self.detailsContainerView.frame;
     
     // Initialize photoOptionView
     self.photoOptionView.layer.cornerRadius = 25;
@@ -66,6 +61,12 @@
     // Initialize PhotoPickerManager.
     _photoMgr = [[PhotoPickerManager alloc] initWithViewController:self];
     
+    // Set up gesture recognizer.
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(endEditingOfDetailsTextView)];
+    
+    [self.mainScrollView addGestureRecognizer:tap];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,24 +89,15 @@
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {
     if (textView == self.detailsTextView) {
-        [self shiftDetailsContainerViewUp];
+        [self shiftDetailsTextViewUp];
     }
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView{
     if (textView == self.detailsTextView) {
-        [self hideAllPopUpViews];
+        [self shiftDetailsTextViewDown];
         _details = self.detailsTextView.text;
     }
-}
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    UITouch *touch = [[event allTouches] anyObject];
-    if ([self.detailsTextView isFirstResponder] && [touch view] != self.detailsTextView) {
-        [self.detailsTextView resignFirstResponder];
-    }
-    [super touchesBegan:touches withEvent:event];
 }
 
 #pragma mark - IBAction handlers
@@ -136,6 +128,21 @@
     [_photoMgr showImagePickerForCamera];
 }
 
+- (IBAction)submit:(id)sender {
+    if ([_photoArray count] == 0) {
+        [self showAlert:@"Upload at least one photo."];
+        return;
+    }
+    if (!_details || (_details.length < 5)) {
+        [self showAlert:@"Give a description of your condition."];
+        return;
+    }
+    ReportObject *reportObj = [[ReportObject alloc] init];
+    [reportObj setDate:_date];
+    [reportObj setImages:_photoArray];
+    [reportObj setDetails:_details];
+}
+
 #pragma mark - HorizontalCollectionView delegates
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -151,12 +158,32 @@
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIdentifier = @"cell";
     
-    PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
-    [cell.cameraButton addTarget:self action:@selector(showPhotoOptionView) forControlEvents:UIControlEventTouchUpInside];
-    
-    return cell;
+    if (indexPath.row < [_photoArray count]) {
+        static NSString *cellIdentifier = @"cell";
+        
+        PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+        [cell.cameraButton setImage:[_photoArray objectAtIndex:indexPath.row] forState:UIControlStateNormal];
+        [cell.cameraButton setUserInteractionEnabled:NO];
+        UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
+        [longPress setMinimumPressDuration:1.0];
+        [cell addGestureRecognizer:longPress];
+        [cell setTag:indexPath.row];
+        return cell;
+
+        
+    } else {
+        static NSString *cellIdentifier = @"cameraCell";
+        PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+        [cell setImage:[UIImage imageNamed:@"photo.png"]];
+        for (UIGestureRecognizer *recognizer in self.view.gestureRecognizers) {
+            [cell removeGestureRecognizer:recognizer];
+        }
+        [cell.cameraButton addTarget:self action:@selector(showPhotoOptionView) forControlEvents:UIControlEventTouchUpInside];
+        [cell setTag:-1];
+        return cell;
+
+    }
 }
 
 #pragma mark - Private helpers for showing/hiding views
@@ -164,10 +191,7 @@
 - (void)hideAllPopUpViews {
     [self hideClosePopUpViewsButton];
     [self hideDatePickerView];
-    [self shiftDetailsContainerViewDown];
     [self hidePhotoOptionView];
-    [self.view bringSubviewToFront:self.detailsContainerView];
-    [self.view bringSubviewToFront:self.detailsContainerView];
     [self.detailsTextView resignFirstResponder];
 }
 
@@ -180,8 +204,8 @@
     self.datePickerView.hidden = NO;
     [self showClosePopUpViewsButton];
     // bring _closePopUpViewButton above detailsContailerView
-    [self.view bringSubviewToFront:_closePopUpViewsButton];
-    [self.view bringSubviewToFront:self.datePickerView];
+    [self.mainScrollView bringSubviewToFront:_closePopUpViewsButton];
+    [self.mainScrollView bringSubviewToFront:self.datePickerView];
     [UIView animateWithDuration:0.25 animations:^{
         self.datePickerView.alpha = 1.0;
     }];
@@ -199,24 +223,28 @@
     _closePopUpViewsButton.alpha = 0;
 }
 
-- (void)shiftDetailsContainerViewUp {
-    [self.detailsContainerView setFrame:CGRectMake(0, _originalDetailsContainerView.origin.y - 216, _originalDetailsContainerView.size.width, _originalDetailsContainerView.size.height)];
-    [self showClosePopUpViewsButton];
-    [self.view bringSubviewToFront:self.detailsContainerView];
-    [self.view becomeFirstResponder];
+- (void)shiftDetailsTextViewUp {
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, 150.0, 0.0);
+    self.mainScrollView.contentInset = contentInsets;
+    self.mainScrollView.scrollIndicatorInsets = contentInsets;
+    CGPoint bottomOffset = CGPointMake(0, self.mainScrollView.contentSize.height - self.mainScrollView.bounds.size.height+150);
+    [self.mainScrollView setContentOffset:bottomOffset animated:YES];
 }
 
-- (void)shiftDetailsContainerViewDown {
-    [self.view addSubview:self.detailsContainerView];
-    [self.detailsContainerView setFrame:_originalDetailsContainerView];
+- (void)shiftDetailsTextViewDown {
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    [UIView animateWithDuration:0.4 animations:^{
+        self.mainScrollView.contentInset = contentInsets;
+    }];
+    self.mainScrollView.scrollIndicatorInsets = contentInsets;
 }
 
 - (void)showPhotoOptionView {
     self.photoOptionView.hidden = NO;
     [self showClosePopUpViewsButton];
     // bring _closePopUpViewButton above detailsContailerView
-    [self.view bringSubviewToFront:_closePopUpViewsButton];
-    [self.view bringSubviewToFront:self.photoOptionView];
+    [self.mainScrollView bringSubviewToFront:_closePopUpViewsButton];
+    [self.mainScrollView bringSubviewToFront:self.photoOptionView];
     [UIView animateWithDuration:0.25 animations:^{
         self.photoOptionView.alpha = 1.0;
     }];
@@ -227,6 +255,12 @@
     self.photoOptionView.alpha = 0;
 }
 
+#pragma mark - Public methods
+- (void)addPhotoToArray:(UIImage *)newImage {
+    [_photoArray addObject:newImage];
+    [_photoCollectionView reloadData];
+    [self hideAllPopUpViews];
+}
 
 #pragma mark - Private helpers
 - (BOOL)isSameDates:(NSDate *)date1 and:(NSDate*)date2 {
@@ -235,6 +269,56 @@
     NSDateComponents *date2Components = [cal components:NSCalendarUnitEra | NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:date2];
     NSComparisonResult comparison = [[cal dateFromComponents:date1Components] compare:[cal dateFromComponents:date2Components]];
     return (comparison == NSOrderedSame);
+}
+
+- (void)endEditingOfDetailsTextView {
+    [self.detailsTextView resignFirstResponder];
+}
+
+- (void)handleLongPress:(UILongPressGestureRecognizer*)gesture {
+    if ([gesture.view tag] == -1 ) {
+        return;
+    }
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Delete photo?"
+                                                                             message:nil
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    //We add buttons to the alert controller by creating UIAlertActions:
+    UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"Ok"
+                                                       style:UIAlertActionStyleDestructive
+                                                     handler:^(UIAlertAction *action){
+                                                         [_photoArray removeObjectAtIndex:[gesture.view tag]];
+                                                         [_photoCollectionView reloadData];
+                                                     }];
+    UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:@"Cancel"
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:nil];
+    [alertController addAction:actionCancel];
+    [alertController addAction:actionOk];
+    [self presentViewController:alertController animated:YES completion:nil];
+    [_photoCollectionView reloadData];
+
+}
+
+- (void)showAlert:(NSString *)string {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:string
+                                                                             message:nil
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleCancel
+                                                     handler:nil];
+    [alertController addAction:actionOK];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+// Prevents horizontal scrolling.
+- (void)scrollViewDidScroll:(UIScrollView *)sender {
+    if (sender == self.mainScrollView) {
+        if (sender.contentOffset.x != 0) {
+            CGPoint offset = sender.contentOffset;
+            offset.x = 0;
+            sender.contentOffset = offset;
+        }
+    }
 }
 
 @end

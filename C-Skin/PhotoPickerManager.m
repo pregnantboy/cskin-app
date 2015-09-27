@@ -9,9 +9,8 @@
 #import "PhotoPickerManager.h"
 
 @interface PhotoPickerManager () {
-    UIViewController *_vc;
+    AddViewController *_vc;
     UIImagePickerController *_imagePickerController;
-    NSMutableArray *_capturedImages;
 }
 
 @end
@@ -23,8 +22,7 @@
 {
     self = [super init];
     if (self) {
-        _capturedImages = [[NSMutableArray alloc] init];
-        _vc = vc;
+        _vc = (AddViewController *)vc;
     }
     return self;
 }
@@ -39,7 +37,7 @@
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         [alert show];
-        [self finishAndUpdate];
+        [_vc dismissViewControllerAnimated:YES completion:NULL];
     } else {
         [self showImagePickerForSourceType:UIImagePickerControllerSourceTypeCamera];
     }
@@ -53,10 +51,6 @@
 
 - (void)showImagePickerForSourceType:(UIImagePickerControllerSourceType)sourceType
 {
-    if (_capturedImages.count > 0)
-    {
-        [_capturedImages removeAllObjects];
-    }
     
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
     imagePickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
@@ -77,34 +71,16 @@
     [_vc presentViewController:_imagePickerController animated:YES completion:nil];
 }
 
-
-- (void)finishAndUpdate
-{
-    [_vc dismissViewControllerAnimated:YES completion:NULL];
-
-    if ([_capturedImages count] == 1)
-    {
-            // Camera took a single picture.
-            //[self.imageView setImage:[self.capturedImages objectAtIndex:0]];
-    }
-
-    // To be ready to start again, clear the captured images array.
-//    [self.capturedImages removeAllObjects];
-//    self.imagePickerController = nil;
-    NSLog(@"done!");
-}
-
-
 #pragma mark - UIImagePickerControllerDelegate
 
 // This method is called when an image has been chosen from the library or taken from the camera.
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
-    
-    [_capturedImages addObject:image];
 
-    [self finishAndUpdate];
+    [_vc dismissViewControllerAnimated:YES completion:NULL];
+    
+    [_vc addPhotoToArray:image];
 }
 
 

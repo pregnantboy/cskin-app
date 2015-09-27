@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "PhotoCollectionViewCell.h"
 #import "PhotoPickerManager.h"
+#import "ReportObject.h"
 
 @interface AddViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIScrollView *mainScrollView;
 
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UITextField *dateOfPicture;
@@ -20,12 +23,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *photoLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *photoCollectionView;
 
-@property (weak, nonatomic) IBOutlet UIView *detailsContainerView;
 @property (weak, nonatomic) IBOutlet UITextView *detailsTextView;
 
 @property (weak, nonatomic) IBOutlet UIView *photoOptionView;
 @property (weak, nonatomic) IBOutlet UIButton *galleryButton;
 @property (weak, nonatomic) IBOutlet UIButton *cameraButton;
+
+- (void)addPhotoToArray:(UIImage *)newImage;
 
 @end
 

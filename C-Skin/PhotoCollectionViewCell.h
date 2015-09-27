@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface PhotoCollectionViewCell : UICollectionViewCell
+
 @property (weak, nonatomic) IBOutlet UIButton *cameraButton;
+
+- (void)setImage:(UIImage *)image;
+- (void)setTag:(NSInteger)tag;
+- (NSInteger)tag;
 
 @end

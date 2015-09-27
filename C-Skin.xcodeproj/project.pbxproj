@@ -15,6 +15,7 @@
 		3C2FB1AE1BB41A1200F0367E /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2FB1AD1BB41A1200F0367E /* PhotoCollectionViewCell.m */; };
 		3C2FB1B41BB4782000F0367E /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C2FB1B31BB4782000F0367E /* photo.png */; };
 		3C5C8AB51BB47C5D00ABCC2B /* PhotoPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5C8AB41BB47C5D00ABCC2B /* PhotoPickerManager.m */; };
+		3C8FE7591BB79BA1003CD158 /* submit.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8FE7581BB79BA1003CD158 /* submit.png */; };
 		3C9515CD1BAFB5A500361E5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9515CC1BAFB5A500361E5F /* main.m */; };
 		3C9515D01BAFB5A500361E5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9515CF1BAFB5A500361E5F /* AppDelegate.m */; };
 		3C9515D31BAFB5A500361E5F /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9515D21BAFB5A500361E5F /* AddViewController.m */; };
@@ -52,6 +53,7 @@
 		3C2FB1B31BB4782000F0367E /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
 		3C5C8AB31BB47C5D00ABCC2B /* PhotoPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPickerManager.h; sourceTree = "<group>"; };
 		3C5C8AB41BB47C5D00ABCC2B /* PhotoPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerManager.m; sourceTree = "<group>"; };
+		3C8FE7581BB79BA1003CD158 /* submit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submit.png; sourceTree = "<group>"; };
 		3C9515C71BAFB5A500361E5F /* C-Skin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "C-Skin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C9515CB1BAFB5A500361E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C9515CC1BAFB5A500361E5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				3C9515F11BAFDDCD00361E5F /* inbox.png */,
 				3C9515F21BAFDDCD00361E5F /* logbook.png */,
 				3C9515F31BAFDDCD00361E5F /* menubar.png */,
+				3C8FE7581BB79BA1003CD158 /* submit.png */,
 				3C9515F41BAFDDCD00361E5F /* settings.png */,
 				3C9515CB1BAFB5A500361E5F /* Info.plist */,
 				3C9515CC1BAFB5A500361E5F /* main.m */,
@@ -251,6 +254,7 @@
 				3C9515F91BAFDDCD00361E5F /* settings.png in Resources */,
 				3C2FB19E1BB3CCE800F0367E /* today button.png in Resources */,
 				3C2FB1B41BB4782000F0367E /* photo.png in Resources */,
+				3C8FE7591BB79BA1003CD158 /* submit.png in Resources */,
 				3C2FB19C1BB3CBCE00F0367E /* set button.png in Resources */,
 				3C9515F51BAFDDCD00361E5F /* doctor.png in Resources */,
 				3C0D465C1BB560D700F3AFFE /* cameraRoll.png in Resources */,

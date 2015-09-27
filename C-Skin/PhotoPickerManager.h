@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#include "AddViewController.h"
 
 @interface PhotoPickerManager : NSObject <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 

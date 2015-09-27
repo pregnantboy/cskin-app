@@ -8,10 +8,24 @@
 
 #import "PhotoCollectionViewCell.h"
 
+@interface PhotoCollectionViewCell() {
+    NSInteger _tag;
+}
+
+@end
+
 @implementation PhotoCollectionViewCell
 
-- (IBAction)addPhoto:(id)sender {
-    
+- (void)setImage:(UIImage *)image {
+    [self.cameraButton setImage:image forState:UIControlStateNormal];
+}
+
+- (void)setTag:(NSInteger)tag {
+    _tag = tag;
+}
+
+- (NSInteger)tag {
+    return _tag;
 }
 
 @end

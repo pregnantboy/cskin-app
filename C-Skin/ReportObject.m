@@ -40,7 +40,7 @@
 }
 
 - (void)setDateOfSubmissionAsNow {
-    _dateOfSubmission = [NSDateFormatter localizedStringFromDate:[NSDate date] dateStyle:NSDateFormatterFullStyle timeStyle:NSDateFormatterFullStyle];
+    _dateOfSubmission = [[self.class submissionDateFormatter] stringFromDate:[NSDate date]];
 }
 
 + (NSDateFormatter *)submissionDateFormatter {
