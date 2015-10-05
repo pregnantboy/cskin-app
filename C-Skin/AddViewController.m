@@ -67,6 +67,9 @@
                                    action:@selector(endEditingOfDetailsTextView)];
     
     [self.mainScrollView addGestureRecognizer:tap];
+    
+    // Set default date
+    _date = [NSDate date];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -96,7 +99,13 @@
 - (void)textViewDidEndEditing:(UITextView *)textView{
     if (textView == self.detailsTextView) {
         [self shiftDetailsTextViewDown];
-        _details = self.detailsTextView.text;
+    }
+}
+
+-(void)textViewDidChange:(UITextView *)textView
+{
+    if (textView == self.detailsTextView) {
+        _details = textView.text;
     }
 }
 
@@ -133,14 +142,16 @@
         [self showAlert:@"Upload at least one photo."];
         return;
     }
-    if (!_details || (_details.length < 5)) {
-        [self showAlert:@"Give a description of your condition."];
-        return;
-    }
+//    if (!_details || (_details.length < 5)) {
+//        [self showAlert:@"Give a description of your condition."];
+//        return;
+//    }
     ReportObject *reportObj = [[ReportObject alloc] init];
     [reportObj setDate:_date];
     [reportObj setImages:_photoArray];
     [reportObj setDetails:_details];
+    [reportObj submitObject];
+    
 }
 
 #pragma mark - HorizontalCollectionView delegates

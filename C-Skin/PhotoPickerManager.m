@@ -56,7 +56,7 @@
     imagePickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
     imagePickerController.sourceType = sourceType;
     imagePickerController.delegate = self;
-    imagePickerController.allowsEditing = YES;
+    imagePickerController.allowsEditing = NO;
     
     if (sourceType == UIImagePickerControllerSourceTypeCamera)
     {

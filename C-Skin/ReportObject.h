@@ -6,8 +6,6 @@
 //  Copyright (c) 2015 Ian Chen. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface ReportObject : NSObject
 
 - (id)init;
@@ -15,6 +13,7 @@
 - (void)setDate:(NSDate *)date;
 - (void)setImages:(NSMutableArray *)arrayOfImages;
 - (void)setDetails:(NSString *)details;
+- (void)submitObject;
 + (NSDateFormatter *)submissionDateFormatter;
 
 @end
