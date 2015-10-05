@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9t3-ge-YnZ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -45,8 +45,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="abW-sh-Wzc" secondAttribute="height" multiplier="25:22" id="d13-VC-VaJ"/>
                                 </constraints>
-                                <inset key="imageEdgeInsets" minX="25" minY="17" maxX="25" maxY="17"/>
-                                <state key="normal" image="doctor.png">
+                                <state key="normal" image="doctor2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -55,8 +54,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="oI8-8C-koU" secondAttribute="height" multiplier="25:22" id="bjv-vq-roR"/>
                                 </constraints>
-                                <inset key="imageEdgeInsets" minX="24" minY="20" maxX="24" maxY="20"/>
-                                <state key="normal" image="inbox.png">
+                                <state key="normal" image="inbox2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -65,8 +63,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xrr-16-xZW" secondAttribute="height" multiplier="25:22" id="TxN-eG-FHT"/>
                                 </constraints>
-                                <inset key="contentEdgeInsets" minX="25" minY="18" maxX="25" maxY="18"/>
-                                <state key="normal" image="logbook.png">
+                                <state key="normal" image="logbook2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -133,8 +130,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="v8H-t8-Ijo" secondAttribute="height" multiplier="25:22" id="GB9-g3-oHS"/>
                                 </constraints>
-                                <inset key="contentEdgeInsets" minX="22" minY="18" maxX="22" maxY="18"/>
-                                <state key="normal" image="settings.png">
+                                <state key="normal" image="settings2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -447,18 +443,128 @@
             </objects>
             <point key="canvasLocation" x="201.5" y="262.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="c4b-rZ-WDL">
+            <objects>
+                <viewController id="9t3-ge-YnZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oJh-46-QCc"/>
+                        <viewControllerLayoutGuide type="bottom" id="y1v-qy-GBl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SPz-Je-Dxv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menubar.png" translatesAutoresizingMaskIntoConstraints="NO" id="1WD-XY-hsx">
+                                <rect key="frame" x="0.0" y="601" width="375" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="xf1-XR-fy0"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="xf1-XR-fy0"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhw-6d-ySg" userLabel="Log Button">
+                                <rect key="frame" x="0.0" y="601" width="75" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jhw-6d-ySg" secondAttribute="height" multiplier="25:22" id="ReJ-Yg-tZS"/>
+                                </constraints>
+                                <state key="normal" image="logbook2.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3MJ-H4-7Sn" userLabel="Doctor Button">
+                                <rect key="frame" x="225" y="601" width="75" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3MJ-H4-7Sn" secondAttribute="height" multiplier="25:22" id="oKJ-MB-5xy"/>
+                                </constraints>
+                                <state key="normal" image="doctor2.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yO-Hn-qcf" userLabel="New Button">
+                                <rect key="frame" x="150" y="601" width="75" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7yO-Hn-qcf" secondAttribute="height" multiplier="25:22" id="iNE-5v-amW"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                <state key="normal" image="new.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeA-2f-aaK" userLabel="Settings Button">
+                                <rect key="frame" x="300" y="601" width="75" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JeA-2f-aaK" secondAttribute="height" multiplier="25:22" id="zKZ-Pa-TP0"/>
+                                </constraints>
+                                <state key="normal" image="settings2.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNR-1p-BKc" userLabel="Inbox Button">
+                                <rect key="frame" x="75" y="601" width="75" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NNR-1p-BKc" secondAttribute="height" multiplier="25:22" id="gd4-pK-teZ"/>
+                                </constraints>
+                                <state key="normal" image="inbox2.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JeA-2f-aaK" firstAttribute="width" secondItem="JeA-2f-aaK" secondAttribute="height" multiplier="25:22" id="23X-b3-opl"/>
+                            <constraint firstItem="7yO-Hn-qcf" firstAttribute="centerX" secondItem="1WD-XY-hsx" secondAttribute="centerX" id="2Eb-UB-hog"/>
+                            <constraint firstItem="NNR-1p-BKc" firstAttribute="centerY" secondItem="1WD-XY-hsx" secondAttribute="centerY" id="2lf-DC-PRN"/>
+                            <constraint firstItem="3MJ-H4-7Sn" firstAttribute="width" secondItem="3MJ-H4-7Sn" secondAttribute="height" multiplier="25:22" id="36L-Zn-1Lb"/>
+                            <constraint firstItem="7yO-Hn-qcf" firstAttribute="width" secondItem="7yO-Hn-qcf" secondAttribute="height" multiplier="25:22" id="5H4-bV-3HT"/>
+                            <constraint firstItem="JeA-2f-aaK" firstAttribute="leading" secondItem="3MJ-H4-7Sn" secondAttribute="trailing" id="5mk-hZ-4bi"/>
+                            <constraint firstItem="NNR-1p-BKc" firstAttribute="width" secondItem="7yO-Hn-qcf" secondAttribute="width" id="9DZ-1h-h8Q"/>
+                            <constraint firstItem="NNR-1p-BKc" firstAttribute="width" secondItem="jhw-6d-ySg" secondAttribute="width" id="Fl6-dN-1Ja"/>
+                            <constraint firstItem="NNR-1p-BKc" firstAttribute="leading" secondItem="jhw-6d-ySg" secondAttribute="trailing" id="ICx-at-iQy"/>
+                            <constraint firstItem="jhw-6d-ySg" firstAttribute="width" secondItem="jhw-6d-ySg" secondAttribute="height" multiplier="25:22" id="dRk-GJ-994"/>
+                            <constraint firstItem="1WD-XY-hsx" firstAttribute="centerY" secondItem="jhw-6d-ySg" secondAttribute="centerY" id="dZc-zD-rfl"/>
+                            <constraint firstItem="3MJ-H4-7Sn" firstAttribute="leading" secondItem="7yO-Hn-qcf" secondAttribute="trailing" id="eMm-Ai-3b7"/>
+                            <constraint firstItem="1WD-XY-hsx" firstAttribute="leading" secondItem="jhw-6d-ySg" secondAttribute="leading" id="eQD-10-MNB"/>
+                            <constraint firstItem="JeA-2f-aaK" firstAttribute="centerY" secondItem="1WD-XY-hsx" secondAttribute="centerY" id="fJk-Sd-5f2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1WD-XY-hsx" secondAttribute="trailing" constant="-16" id="gXy-Ez-sLe"/>
+                            <constraint firstItem="3MJ-H4-7Sn" firstAttribute="width" secondItem="JeA-2f-aaK" secondAttribute="width" id="hEz-pR-u8g"/>
+                            <constraint firstItem="3MJ-H4-7Sn" firstAttribute="centerY" secondItem="1WD-XY-hsx" secondAttribute="centerY" id="jn0-Xa-fpE"/>
+                            <constraint firstItem="1WD-XY-hsx" firstAttribute="leading" secondItem="SPz-Je-Dxv" secondAttribute="leadingMargin" constant="-16" id="lvw-Le-8ti"/>
+                            <constraint firstItem="y1v-qy-GBl" firstAttribute="top" secondItem="1WD-XY-hsx" secondAttribute="bottom" id="o07-Fs-2EK"/>
+                            <constraint firstItem="7yO-Hn-qcf" firstAttribute="leading" secondItem="NNR-1p-BKc" secondAttribute="trailing" id="pfR-7H-tqR"/>
+                            <constraint firstItem="7yO-Hn-qcf" firstAttribute="width" secondItem="3MJ-H4-7Sn" secondAttribute="width" id="phq-WV-yVE"/>
+                            <constraint firstItem="JeA-2f-aaK" firstAttribute="trailing" secondItem="1WD-XY-hsx" secondAttribute="trailing" id="sOJ-sL-gLg"/>
+                            <constraint firstItem="NNR-1p-BKc" firstAttribute="width" secondItem="NNR-1p-BKc" secondAttribute="height" multiplier="25:22" id="sia-PF-MI7"/>
+                            <constraint firstItem="7yO-Hn-qcf" firstAttribute="centerY" secondItem="1WD-XY-hsx" secondAttribute="centerY" id="yII-Pe-QbL"/>
+                            <constraint firstItem="1WD-XY-hsx" firstAttribute="height" secondItem="7yO-Hn-qcf" secondAttribute="height" id="yjY-nd-aQ0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5H4-bV-3HT"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JGt-07-C4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653.5" y="262.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="camera.png" width="464" height="464"/>
         <image name="cameraRoll.png" width="462" height="464"/>
-        <image name="doctor.png" width="81" height="99"/>
-        <image name="inbox.png" width="96" height="84"/>
-        <image name="logbook.png" width="78" height="99"/>
+        <image name="doctor2.png" width="210" height="198"/>
+        <image name="inbox2.png" width="210" height="198"/>
+        <image name="logbook2.png" width="210" height="198"/>
         <image name="menubar.png" width="374" height="66"/>
         <image name="new.png" width="150" height="150"/>
         <image name="photo.png" width="345" height="345"/>
         <image name="set button.png" width="264" height="39"/>
-        <image name="settings.png" width="108" height="108"/>
+        <image name="settings2.png" width="210" height="198"/>
         <image name="submit.png" width="792" height="120"/>
         <image name="today button.png" width="264" height="39"/>
     </resources>
