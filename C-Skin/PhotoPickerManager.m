@@ -37,7 +37,7 @@
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         [alert show];
-        [_vc dismissViewControllerAnimated:YES completion:NULL];
+       // [_vc dismissViewControllerAnimated:YES completion:NULL];
     } else {
         [self showImagePickerForSourceType:UIImagePickerControllerSourceTypeCamera];
     }

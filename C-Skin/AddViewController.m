@@ -114,6 +114,7 @@
 - (IBAction)setAsToday:(id)sender {
     _date = [NSDate date];
     self.dateOfPicture.text = @"Today";
+    self.datePicker.date = [NSDate date];
     [self hideAllPopUpViews];
 }
 - (IBAction)setCustomDate:(id)sender {

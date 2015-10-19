@@ -20,6 +20,9 @@
 		3C896D941BC2CA6B007B39C4 /* doctor2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C896D901BC2CA6B007B39C4 /* doctor2.png */; };
 		3C896D961BC2CA6B007B39C4 /* logbook2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C896D921BC2CA6B007B39C4 /* logbook2.png */; };
 		3C896D971BC2CA6B007B39C4 /* settings2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C896D931BC2CA6B007B39C4 /* settings2.png */; };
+		3C896D9A1BC2CC0A007B39C4 /* LogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C896D991BC2CC0A007B39C4 /* LogViewController.m */; };
+		3C896D9D1BC2CC54007B39C4 /* LogTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C896D9C1BC2CC54007B39C4 /* LogTableViewCell.m */; };
+		3C896DA01BC2CC9D007B39C4 /* LogCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C896D9F1BC2CC9D007B39C4 /* LogCollectionViewCell.m */; };
 		3C8FE7591BB79BA1003CD158 /* submit.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8FE7581BB79BA1003CD158 /* submit.png */; };
 		3C9515CD1BAFB5A500361E5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9515CC1BAFB5A500361E5F /* main.m */; };
 		3C9515D01BAFB5A500361E5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9515CF1BAFB5A500361E5F /* AppDelegate.m */; };
@@ -64,6 +67,12 @@
 		3C896D901BC2CA6B007B39C4 /* doctor2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doctor2.png; sourceTree = "<group>"; };
 		3C896D921BC2CA6B007B39C4 /* logbook2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logbook2.png; sourceTree = "<group>"; };
 		3C896D931BC2CA6B007B39C4 /* settings2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings2.png; sourceTree = "<group>"; };
+		3C896D981BC2CC0A007B39C4 /* LogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogViewController.h; sourceTree = "<group>"; };
+		3C896D991BC2CC0A007B39C4 /* LogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogViewController.m; sourceTree = "<group>"; };
+		3C896D9B1BC2CC54007B39C4 /* LogTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogTableViewCell.h; sourceTree = "<group>"; };
+		3C896D9C1BC2CC54007B39C4 /* LogTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogTableViewCell.m; sourceTree = "<group>"; };
+		3C896D9E1BC2CC9D007B39C4 /* LogCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCollectionViewCell.h; sourceTree = "<group>"; };
+		3C896D9F1BC2CC9D007B39C4 /* LogCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogCollectionViewCell.m; sourceTree = "<group>"; };
 		3C8FE7581BB79BA1003CD158 /* submit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submit.png; sourceTree = "<group>"; };
 		3C9515C71BAFB5A500361E5F /* C-Skin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "C-Skin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C9515CB1BAFB5A500361E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,6 +137,12 @@
 			children = (
 				3C9515D11BAFB5A500361E5F /* AddViewController.h */,
 				3C9515D21BAFB5A500361E5F /* AddViewController.m */,
+				3C896D981BC2CC0A007B39C4 /* LogViewController.h */,
+				3C896D991BC2CC0A007B39C4 /* LogViewController.m */,
+				3C896D9B1BC2CC54007B39C4 /* LogTableViewCell.h */,
+				3C896D9C1BC2CC54007B39C4 /* LogTableViewCell.m */,
+				3C896D9E1BC2CC9D007B39C4 /* LogCollectionViewCell.h */,
+				3C896D9F1BC2CC9D007B39C4 /* LogCollectionViewCell.m */,
 				3C9515CE1BAFB5A500361E5F /* AppDelegate.h */,
 				3C9515CF1BAFB5A500361E5F /* AppDelegate.m */,
 				3C10504B1BC258C5005A5AB0 /* Keys.h */,
@@ -313,6 +328,9 @@
 				3C9515D01BAFB5A500361E5F /* AppDelegate.m in Sources */,
 				3C2FB1AE1BB41A1200F0367E /* PhotoCollectionViewCell.m in Sources */,
 				3C9515CD1BAFB5A500361E5F /* main.m in Sources */,
+				3C896DA01BC2CC9D007B39C4 /* LogCollectionViewCell.m in Sources */,
+				3C896D9D1BC2CC54007B39C4 /* LogTableViewCell.m in Sources */,
+				3C896D9A1BC2CC0A007B39C4 /* LogViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
